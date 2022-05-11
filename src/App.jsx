@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 
 import tw from "twin.macro";
@@ -25,7 +24,7 @@ const Title = tw.h1`
 function App() {
   return (
     <AppContainer>
-      <Title>React Tables</Title>
+      <Title>טבלת חדרים</Title>
       <Products />
     </AppContainer>
   );

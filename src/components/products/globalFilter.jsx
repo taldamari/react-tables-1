@@ -1,3 +1,4 @@
+import "./index.css"
 import React, { useState } from "react";
 import { useAsyncDebounce } from "react-table";
 import tw from "twin.macro";
@@ -19,7 +20,7 @@ const Input = tw.input`
   h-8
   border-2
   border-solid
-  border-green-500
+  border-blue-500
   outline-none
   p-4
   rounded-lg
@@ -37,16 +38,16 @@ export function GlobalFilter({
   }, 300);
 
   return (
-    <SearchContainer>
-      <SearchText>Search:</SearchText>
+    <SearchContainer className="search-containar">
       <Input
         value={value || ""}
         onChange={(e) => {
           setValue(e.target.value);
           onChange(e.target.value);
         }}
-        placeholder={`${count} records...`}
-      />
+        placeholder={`${count} רשומות`}
+        />
+        <SearchText> :חיפוש</SearchText>
     </SearchContainer>
   );
 }
